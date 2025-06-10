@@ -88,5 +88,3 @@ Os Códigos M controlam funções auxiliares da máquina, como ligar/desligar o 
 *   **Fuso (Spindle):** O eixo principal do torno que gira e segura a peça através da placa.
 *   **Romi GL 240M:** O modelo específico do seu torno CNC.
 *   **Velocidade de Corte (VC):** A velocidade relativa entre a aresta de corte da ferramenta e a superfície da peça. É um parâmetro crucial para a vida útil da ferramenta e o acabamento. Medida em metros por minuto (m/min).
-
-![image](https://github.com/user-attachments/assets/3f70669c-53cd-4f2f-872f-b7db86df3cc6)
