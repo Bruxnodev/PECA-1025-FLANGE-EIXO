@@ -13,7 +13,7 @@ N10 G21 G40 G80 G99 ; (Define sistema métrico, cancela comp., cancela ciclos, a
 N15 G28 U0 W0 ;       (Envia eixos para o ponto de referência da máquina)
 N20 G50 S3500 ;       (Limita a rotação máxima em 3500 RPM para segurança)
 N25 T0101 ;           (Chama a ferramenta 1 com o corretor 1)
-N30 G96 S220 M03 ;    (Define velocidade de corte constante em 220 m/min, liga o fuso sentido horário)
+N30 G96 S220 M04 ;    (Define velocidade de corte constante em 220 m/min, liga o fuso sentido horário)
 
 N35 G00 X21.0 Z2.0 M08 ; (Posicionamento rápido inicial, fora da peça, liga refrigeração)
 
