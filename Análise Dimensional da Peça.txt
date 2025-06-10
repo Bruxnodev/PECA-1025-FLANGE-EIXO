@@ -1,0 +1,13 @@
+Análise Dimensional da Peça
+Com base no desenho técnico, estas são as dimensões principais da peça:
+Comprimento Total: 80 mm
+Diâmetro Maior (Flange): Ø 80 mm
+Comprimento do Flange: 22 mm (calculado: 80 mm - 58 mm)
+Raio de Canto do Flange: R3
+Diâmetro da Face Cônica: Inicia em Ø 50 mm e termina em Ø 74 mm (conforme G-Code)
+Posição da Face Cônica: De Z-55 a Z-58 (onde começa o raio R3)
+Diâmetro Intermediário: Ø 44 mm
+Raio Côncavo de Ligação: R10 (entre o diâmetro de Ø 24 e Ø 44)
+Diâmetro Menor (Eixo): Ø 24 mm
+Comprimento do Eixo (parte reta Ø24): 28.5 mm (de Z-1.5 a Z-30)
+Chanfro Frontal: 1,5 mm x 45°

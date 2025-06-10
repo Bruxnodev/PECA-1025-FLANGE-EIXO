@@ -1,0 +1,36 @@
+O1025 (ACABAMENTO FLANGE-EIXO)
+
+(=================================)
+( PECA: FLANGE-EIXO               )
+( PROGRAMA: O1025                 )
+( OPERACAO: ACABAMENTO EXTERNO    )
+( MAQUINA: ROMI GL 240M           )
+( COMANDO: FANUC                  )
+( FERRAMENTA: T01 - ACABAMENTO    )
+(=================================)
+
+N10 G21 G40 G80 G99 ; (Define sistema métrico, cancela comp., cancela ciclos, avanço por rotação)
+N15 G28 U0 W0 ;       (Envia eixos para o ponto de referência da máquina)
+N20 G50 S3500 ;       (Limita a rotação máxima em 3500 RPM para segurança)
+N25 T0101 ;           (Chama a ferramenta 1 com o corretor 1)
+N30 G96 S220 M03 ;    (Define velocidade de corte constante em 220 m/min, liga o fuso sentido horário)
+
+N35 G00 X21.0 Z2.0 M08 ; (Posicionamento rápido inicial, fora da peça, liga refrigeração)
+
+(INICIO DO PERFIL DE ACABAMENTO)
+N40 G01 Z0.0 F0.15 ;    (Avança até a face da peça em Z0)
+N45 G01 X24.0 Z-1.5 ;   (Usinagem do chanfro de 1,5mm x 45 graus)
+N50 G01 Z-30.0 ;        (Usinagem do diâmetro de 24 mm)
+N55 G02 X44.0 Z-40.0 R10.0 ; (Usinagem do raio côncavo de R10, interpolação horária)
+N60 G01 X50.0 Z-55.0 ;  (Usinagem da seção cônica)
+N65 G01 X74.0 ;         (Usinagem da face até o diâmetro de 74mm)
+N70 G03 X80.0 Z-58.0 R3.0 ; (Usinagem do raio de canto R3, interpolação anti-horária)
+N75 G01 Z-80.0 ;        (Usinagem final do diâmetro de 80 mm)
+(FIM DO PERFIL)
+
+N80 G00 X85.0 ;       (Afastamento rápido no eixo X)
+N85 G00 Z5.0 M09 ;    (Afastamento rápido em Z, desliga refrigeração)
+N90 G28 U0 W0 ;       (Retorna ao ponto de referência da máquina)
+N95 M05 ;             (Desliga o fuso)
+N100 M30 ;            (Fim do programa e reseta)
+%
